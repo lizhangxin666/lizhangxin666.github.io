@@ -3,33 +3,22 @@
 //
 // LAYOUT
 //
-// This file contains all the major layout configurations.
-//
 
 //
 // CONTAINER
 //
-// This is the container that wraps all the content on the page.
-//
 .container,
 .container-fluid {
   max-width: $container-max-width;
-  padding-right: $container-padding;
-  padding-left: $container-padding;
+  padding-right: 1.5rem; // Simplified for consistency
+  padding-left: 1.5rem;  // Simplified for consistency
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-
-  @include media-breakpoint('sm') {
-    padding-right: $container-padding-sm;
-    padding-left: $container-padding-sm;
-  }
 }
 
 //
 // HEADER
-//
-// This is the header that appears at the top of the page.
 //
 header {
   padding-bottom: 2rem;
@@ -59,8 +48,6 @@ header {
 
 //
 // CONTENT
-//
-// This is the main content area of the page.
 //
 .post {
   padding: 0;
@@ -122,8 +109,6 @@ header {
 
 //
 // FOOTER
-//
-// This is the footer that appears at the bottom of the page.
 //
 footer {
   margin-top: 3rem;
