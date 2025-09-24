@@ -16,25 +16,40 @@ permissions:
 
 jobs:
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
+    # 使用最新的 ubuntu 镜像
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v3
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.2.2'
-        bundler-cache: true
-    - name: Install and Build 🔧
-      run: |
-        pip3 install --upgrade jupyter
-        npm install -g mermaid.cli
-        export JEKYLL_ENV=production
-        bundle exec jekyll build
-    - name: Deploy 🚀
-      if: github.event_name != 'pull_request'
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: _site
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          # 使用您指定的 Ruby 版本
+          ruby-version: '3.2.2'
+          # 缓存依赖项以加快速度
+          bundler-cache: true
+      
+      # 新增步骤：安装 Imagemagick
+      - name: Install Imagemagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      # 步骤：安装 Python 和 Node.js 的依赖
+      - name: Install Dependencies
+        run: |
+          pip3 install --upgrade jupyter
+          npm install -g mermaid.cli
+
+      # 步骤：构建 Jekyll 网站
+      - name: Build site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      # 步骤：部署到 GitHub Pages
+      - name: Deploy 🚀
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 指定要部署的文件夹
+          folder: _site
