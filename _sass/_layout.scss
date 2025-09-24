@@ -1,5 +1,3 @@
-@import 'variables';
-
 //
 // LAYOUT
 //
@@ -9,9 +7,10 @@
 //
 .container,
 .container-fluid {
-  max-width: $container-max-width;
-  padding-right: 1.5rem; // 为保持一致性，简化了内边距
-  padding-left: 1.5rem;  // 为保持一致性，简化了内边距
+  // 直接使用在 main.scss 中定义好的主变量，绕过 import 依赖问题
+  max-width: $max-content-width; 
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
