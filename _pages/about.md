@@ -57,5 +57,5 @@ My hobbies:
 
 - 📧 Email: rgsdlizx@163.com  
 
-> “Truth gets clearer through dialogue—let’s keep the conversation going!”等越拨越亮，真理越辩越明！
+> “Truth gets clearer through dialogue—let’s keep the conversation going!”灯💡越拨越亮，真理越辩越明！
 
