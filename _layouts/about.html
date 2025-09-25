@@ -12,6 +12,13 @@ layout: default
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* --- 强制覆盖主题样式的代码 --- */
+        /* 移除主题对页面宽度的限制 */
+        .page .container, .page .container-fluid {
+            max-width: none !important;
+        }
+        /* --- END --- */
+
         body {
             font-family: 'Noto Serif SC', serif;
         }
@@ -84,16 +91,12 @@ layout: default
     </style>
 </head>
 <body class="elegant-bg flex items-center justify-center min-h-screen py-8">
-    <div class="content-container max-w-5xl mx-auto rounded-xl p-8 sm:p-12 md:p-16">
+    <div class="content-container w-11/12 lg:w-4/5 mx-auto rounded-xl p-8 sm:p-12 md:p-16">
         
         <div class="text-center mb-10">
             {%- assign profile_data = site.data.profile -%}
-            <h1 class="text-4xl md:text-5xl font-bold" style="color: var(--heading-color);">
-                {{ profile_data.name | default: site.title | default: " " }}
-            </h1>
-            <p class="text-lg tracking-widest mt-4" style="color: var(--accent-color);">
-                {{ profile_data.tagline | default: " " }}
-            </p>
+            <h1 class="text-4xl md:text-5xl font-bold" style="color: var(--heading-color);">{{ profile_data.name | default: site.title | default: " " }}</h1>
+            <p class="text-lg tracking-widest mt-4" style="color: var(--accent-color);">{{ profile_data.tagline | default: " " }}</p>
         </div>
 
         <div class="prose-custom max-w-none text-lg">
@@ -102,17 +105,13 @@ layout: default
                     <h2 class="section-title">[ About Me ]</h2>
                 </div>
                 <div class="section-content">
-                    <!-- ✅ 布局优化：移动端上下排，大屏左右排 -->
-                    <div class="flex flex-col md:flex-row md:items-start md:gap-12">
-                        <div class="flex-1">
+                    <div class="flex flex-col md:flex-row md:items-start md:space-x-12">
+                        <div class="md:w-3/4">
                             {{ content }}
                         </div>
                         {% if page.profile.image %}
-                        <div class="flex-shrink-0 mt-8 md:mt-0 flex justify-center">
-                            <!-- ✅ 限制图片最大宽度，防止挤压文字 -->
-                            <img class="profile-image max-w-[180px] md:max-w-[200px]"
-                                 src="{{ '/assets/img/' | append: page.profile.image | relative_url }}"
-                                 alt="Profile Image">
+                        <div class="md:w-1/4 mt-8 md:mt-0 flex justify-center flex-shrink-0">
+                            <img class="profile-image" src="{{ '/assets/img/' | append: page.profile.image | relative_url }}" alt="Profile Image">
                         </div>
                         {% endif %}
                     </div>
@@ -121,9 +120,7 @@ layout: default
         </div>
 
         <div class="text-center mt-16">
-            <p class="text-2xl" style="color: var(--accent-color); font-weight: 500;">
-                灯💡越拨越亮，真理越辩越明！
-            </p>
+            <p class="text-2xl" style="color: var(--accent-color); font-weight: 500;">灯💡越拨越亮，真理越辩越明！</p>
         </div>
 
     </div>
