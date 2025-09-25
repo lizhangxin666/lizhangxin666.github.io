@@ -61,7 +61,7 @@ layout: default
             color: var(--heading-color);
         }
         .section-content {
-            padding: 2rem;
+            padding: 2.5rem; /* 稍微再增加一点内边距 */
         }
         .prose-custom p {
             line-height: 1.9;
@@ -84,12 +84,12 @@ layout: default
     </style>
 </head>
 <body class="elegant-bg flex items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
-    <div class="content-container w-full max-w-5xl mx-auto rounded-xl p-8 sm:p-12 md:p-16 my-8">
+    <div class="content-container w-full max-w-7xl mx-auto rounded-xl p-8 sm:p-12 md:p-16 my-8">
         
         <div class="text-center mb-10">
-            {%- assign profile = site.data.profile -%}
-            <h1 class="text-4xl md:text-5xl font-bold" style="color: var(--heading-color);">{{ profile.name | default: site.title | default: " " }}</h1>
-            <p class="text-lg tracking-widest mt-4" style="color: var(--accent-color);">{{ profile.tagline | default: " " }}</p>
+            {%- assign profile_data = site.data.profile -%}
+            <h1 class="text-4xl md:text-5xl font-bold" style="color: var(--heading-color);">{{ profile_data.name | default: site.title | default: " " }}</h1>
+            <p class="text-lg tracking-widest mt-4" style="color: var(--accent-color);">{{ profile_data.tagline | default: " " }}</p>
         </div>
 
         <div class="prose-custom max-w-none text-lg">
@@ -98,14 +98,13 @@ layout: default
                     <h2 class="section-title">[ About Me ]</h2>
                 </div>
                 <div class="section-content">
-                    <div class="flex flex-col md:flex-row md:items-start md:space-x-8">
+                    <div class="flex flex-col md:flex-row md:items-start md:space-x-12">
                         <div class="flex-grow">
                             {{ content }}
                         </div>
-                        {% if page.profile %}
+                        {% if page.profile.image %}
                         <div class="flex-shrink-0 mt-8 md:mt-0 text-center">
-                            {%- assign profile = page.profile -%}
-                            <img class="profile-image mx-auto" src="{{ profile.image | relative_url }}" alt="{{ profile.image_alt | default: 'profile_image' }}">
+                             <img class="profile-image mx-auto" src="{{ '/assets/img/' | append: page.profile.image | relative_url }}" alt="Profile Image">
                         </div>
                         {% endif %}
                     </div>
