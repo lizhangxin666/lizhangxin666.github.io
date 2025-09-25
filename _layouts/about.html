@@ -51,7 +51,7 @@ layout: default
         }
         .section-title-strip {
             background-color: var(--title-strip-bg);
-            padding: 1.25rem 2rem;
+            padding: 1.25rem 2.5rem;
             border-bottom: 1px solid var(--border-color);
         }
         .section-title {
@@ -61,7 +61,7 @@ layout: default
             color: var(--heading-color);
         }
         .section-content {
-            padding: 2.5rem; /* 稍微再增加一点内边距 */
+            padding: 2.5rem;
         }
         .prose-custom p {
             line-height: 1.9;
@@ -83,8 +83,8 @@ layout: default
         }
     </style>
 </head>
-<body class="elegant-bg flex items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
-    <div class="content-container w-full max-w-7xl mx-auto rounded-xl p-8 sm:p-12 md:p-16 my-8">
+<body class="elegant-bg flex items-center justify-center min-h-screen py-8">
+    <div class="content-container w-11/12 mx-auto rounded-xl p-8 sm:p-12 md:p-16">
         
         <div class="text-center mb-10">
             {%- assign profile_data = site.data.profile -%}
@@ -99,12 +99,12 @@ layout: default
                 </div>
                 <div class="section-content">
                     <div class="flex flex-col md:flex-row md:items-start md:space-x-12">
-                        <div class="flex-grow">
+                        <div class="md:w-3/4">
                             {{ content }}
                         </div>
                         {% if page.profile.image %}
-                        <div class="flex-shrink-0 mt-8 md:mt-0 text-center">
-                             <img class="profile-image mx-auto" src="{{ '/assets/img/' | append: page.profile.image | relative_url }}" alt="Profile Image">
+                        <div class="md:w-1/4 mt-8 md:mt-0 flex justify-center flex-shrink-0">
+                            <img class="profile-image" src="{{ '/assets/img/' | append: page.profile.image | relative_url }}" alt="Profile Image">
                         </div>
                         {% endif %}
                     </div>
