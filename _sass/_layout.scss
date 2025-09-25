@@ -7,111 +7,113 @@
 //
 .container,
 .container-fluid {
-  // 直接使用在 main.scss 中定义好的主变量，绕过 import 依赖问题
-  max-width: $max-content-width; 
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
+  // 直接使用在 main.scss 中定义好的主变量，绕过 import 依赖问题
+  max-width: $max-content-width; 
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
 }
 
 //
 // HEADER
 //
 header {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3rem;
 
-  .navbar {
-    padding: 0;
-  }
+  .navbar {
+    padding: 0;
+  }
 
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text-color);
-  }
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
 
-  .nav-link {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    padding: 0.5rem 1rem !important;
+  .nav-link {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem !important;
 
-    &:hover {
-      color: var(--highlight-color);
-    }
-  }
+    &:hover {
+      color: var(--highlight-color);
+    }
+  }
 }
 
 //
 // CONTENT
 //
+/*
 .post {
-  padding: 0;
-  margin-bottom: 3rem;
-  background-color: transparent;
-  box-shadow: none;
+  padding: 0;
+  margin-bottom: 3rem;
+  background-color: transparent;
+  box-shadow: none;
 
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
 
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    border-bottom: 2px solid var(--highlight-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
-  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
 
-  h2 {
-    font-size: 2rem;
-    font-weight: 600;
-  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 
-  p, li {
-    font-size: 1.1rem;
-    line-height: 1.8;
-  }
+  p, li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
 
-  a {
-    color: var(--highlight-color);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--highlight-color);
+  a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--highlight-color);
 
-    &:hover {
-      color: var(--text-color);
-      background-color: var(--highlight-color);
-      border-bottom-style: solid;
-    }
-  }
+    &:hover {
+      color: var(--text-color);
+      background-color: var(--highlight-color);
+      border-bottom-style: solid;
+    }
+  }
 
-  // 为新闻部分增加一些间距，提高可读性
-  .news {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
+  // 为新闻部分增加一些间距，提高可读性
+  .news {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
 
-    h2 {
-      border-bottom: none;
-      font-size: 1.8rem;
-    }
+    h2 {
+      border-bottom: none;
+      font-size: 1.8rem;
+    }
 
-    table {
-      width: 100%;
-    }
-  }
+    table {
+      width: 100%;
+    }
+  }
 }
+*/
 
 //
 // FOOTER
 //
 footer {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border-color);
-  color: var(--light-text-color);
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--light-text-color);
 }
