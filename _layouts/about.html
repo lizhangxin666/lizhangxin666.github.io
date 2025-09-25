@@ -24,7 +24,6 @@ layout: default
             --accent-color: #8A7EB5;
             --border-color: #EAE6F8;
             --title-strip-bg: #F4F2FA;
-            --quote-bg: #F9F8FD;
         }
         .elegant-bg {
             background-color: var(--bg-color);
@@ -52,7 +51,7 @@ layout: default
         }
         .section-title-strip {
             background-color: var(--title-strip-bg);
-            padding: 1rem 1.5rem;
+            padding: 1.25rem 2rem;
             border-bottom: 1px solid var(--border-color);
         }
         .section-title {
@@ -62,14 +61,21 @@ layout: default
             color: var(--heading-color);
         }
         .section-content {
-            padding: 1.5rem;
+            padding: 2rem;
         }
         .prose-custom p {
-            line-height: 1.8;
+            line-height: 1.9;
             margin-bottom: 1.25em;
         }
         .prose-custom p:last-child {
             margin-bottom: 0;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(100, 90, 130, 0.15);
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -78,12 +84,12 @@ layout: default
     </style>
 </head>
 <body class="elegant-bg flex items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
-    <div class="content-container w-full max-w-4xl mx-auto rounded-xl p-6 sm:p-10 md:p-12 my-8">
+    <div class="content-container w-full max-w-5xl mx-auto rounded-xl p-8 sm:p-12 md:p-16 my-8">
         
-        <div class="text-center mb-8">
+        <div class="text-center mb-10">
             {%- assign profile = site.data.profile -%}
             <h1 class="text-4xl md:text-5xl font-bold" style="color: var(--heading-color);">{{ profile.name | default: site.title | default: " " }}</h1>
-            <p class="text-lg tracking-widest mt-3" style="color: var(--accent-color);">{{ profile.tagline | default: " " }}</p>
+            <p class="text-lg tracking-widest mt-4" style="color: var(--accent-color);">{{ profile.tagline | default: " " }}</p>
         </div>
 
         <div class="prose-custom max-w-none text-lg">
@@ -92,7 +98,17 @@ layout: default
                     <h2 class="section-title">[ About Me ]</h2>
                 </div>
                 <div class="section-content">
-                    {{ content }}
+                    <div class="flex flex-col md:flex-row md:items-start md:space-x-8">
+                        <div class="flex-grow">
+                            {{ content }}
+                        </div>
+                        {% if page.profile %}
+                        <div class="flex-shrink-0 mt-8 md:mt-0 text-center">
+                            {%- assign profile = page.profile -%}
+                            <img class="profile-image mx-auto" src="{{ profile.image | relative_url }}" alt="{{ profile.image_alt | default: 'profile_image' }}">
+                        </div>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
