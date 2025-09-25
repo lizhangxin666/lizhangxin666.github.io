@@ -1,8 +1,8 @@
 ---
-layout: about
+layout: about-elegant
 title: About
 permalink: /
-subtitle:
+subtitle:社会理论·科技伦理·AI创业·好奇心·不断探索 🌱
 profile:
   align: right
   image: avatar.jpeg  # 你的头像文件名
