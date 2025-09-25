@@ -5,13 +5,7 @@ permalink: /
 subtitle: 社会理论·科技伦理·AI创业·好奇心·不断探索 🌱
 profile:
   align: right
-  image: avatar.jpeg  # 你的头像文件名
-  image_circular: true
-  address:
-news: true
-latest_posts: true
-selected_papers: false
-social: true
+  image: avatar.jpeg
 ---
 
 ### 李张欣 · Kristar Lee  
