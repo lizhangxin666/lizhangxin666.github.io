@@ -1,5 +1,5 @@
 ---
-layout: about-elegant
+layout: about
 title: About
 permalink: /
 subtitle: 社会理论·科技伦理·AI创业·好奇心·不断探索 🌱
