@@ -1,118 +1,77 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - 李张欣</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Noto Serif SC', serif;
-        }
-        :root {
-            --bg-color: #F8F7FC;
-            --card-bg: #FFFFFF;
-            --section-card-bg: #FDFCFE;
-            --text-color: #4A445D;
-            --heading-color: #3D3552;
-            --accent-color: #8A7EB5;
-            --border-color: #EAE6F8;
-            --title-strip-bg: #F4F2FA;
-        }
-        .elegant-bg {
-            background-color: var(--bg-color);
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23EAE6F8' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        .content-container {
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 40px -15px rgba(100, 90, 130, 0.25);
-            animation: fadeIn 1s ease-out;
-        }
-        .section-card {
-            background-color: var(--section-card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 0.75rem;
-            margin-top: 2rem;
-            box-shadow: 0 4px 15px -5px rgba(100, 90, 130, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .section-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px -8px rgba(100, 90, 130, 0.2);
-        }
-        .section-title-strip {
-            background-color: var(--title-strip-bg);
-            padding: 1.25rem 2.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .section-title {
-            font-weight: 700;
-            font-size: 1.25rem;
-            letter-spacing: 0.05em;
-            color: var(--heading-color);
-        }
-        .section-content {
-            padding: 2.5rem;
-        }
-        .prose-custom p {
-            line-height: 1.9;
-            margin-bottom: 1.25em;
-        }
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid var(--border-color);
-            box-shadow: 0 4px 15px rgba(100, 90, 130, 0.15);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-</head>
-<body class="elegant-bg flex items-center justify-center min-h-screen py-8">
-    <div class="content-container w-11/12 lg:w-4/5 mx-auto rounded-xl p-8 sm:p-12 md:p-16">
-        
-        <div class="text-center mb-10">
-            {%- assign profile_data = site.data.profile -%}
-            <h1 class="text-4xl md:text-5xl font-bold" style="color: var(--heading-color);">{{ profile_data.name | default: site.title | default: " " }}</h1>
-            <p class="text-lg tracking-widest mt-4" style="color: var(--accent-color);">{{ profile_data.tagline | default: " " }}</p>
-        </div>
 
-        <div class="prose-custom max-w-none text-lg">
-            <div class="section-card">
-                <div class="section-title-strip">
-                    <h2 class="section-title">[ About Me ]</h2>
-                </div>
-                <div class="section-content">
-                    <div class="flex flex-col md:flex-row md:items-start md:space-x-12">
-                        <div class="md:w-3/4">
-                            {{ content }}
-                        </div>
-                        {% if page.profile.image %}
-                        <div class="md:w-1/4 mt-8 md:mt-0 flex justify-center flex-shrink-0">
-                            <img class="profile-image" src="{{ '/assets/img/' | append: page.profile.image | relative_url }}" alt="Profile Image">
-                        </div>
-                        {% endif %}
-                    </div>
-                </div>
+<!-- about.html -->
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">
+            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+          </h1>
+          <p class="desc">{{ page.subtitle }}</p>
+        </header>
+
+        <article>
+          {% if page.profile -%}
+          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
+            {%- if page.profile.image %}
+              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+
+              {% if page.profile.image_circular %}
+                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
+              {% else %}
+                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
+              {% endif %}
+
+              {% include figure.html
+              path=profile_image_path
+              class=profile_image_class
+              alt=page.profile.image
+              cache_bust=true -%}
+            {% endif -%}
+            {%- if page.profile.address %}
+            <div class="address">
+              {{ page.profile.address }}
             </div>
-        </div>
+            {%- endif %}
+          </div>
+          {%- endif %}
 
-        <div class="text-center mt-16">
-            <p class="text-2xl" style="color: var(--accent-color); font-weight: 500;">灯💡越拨越亮，真理越辩越明！</p>
-        </div>
+          <div class="clearfix">
+            {{ content }}
+          </div>
 
-    </div>
-</body>
-</html>
+          <!-- News -->
+          {% if page.news and site.announcements.enabled -%}
+            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
+            {%- include news.html limit=true %}
+          {%- endif %}
+
+          <!-- Latest posts -->
+          {% if page.latest_posts -%}
+            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
+            {%- include latest_posts.html %}
+          {%- endif %}
+
+          <!-- Selected papers -->
+          {% if page.selected_papers -%}
+            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+            {%- include selected_papers.html %}
+          {%- endif %}
+
+          <!-- Social -->
+          {%- if page.social %}
+            <div class="social">
+              <div class="contact-icons">
+                {% include social.html %}
+              </div>
+
+              <div class="contact-note">
+                {{ site.contact_note }}
+              </div>
+
+            </div>
+          {%- endif %}
+        </article>
+
+</div>
