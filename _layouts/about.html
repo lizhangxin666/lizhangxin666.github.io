@@ -3,26 +3,26 @@ layout: default
 ---
 
 <!-- about.html -->
-<div class="post about-page">
-  <!-- Hero Section with Full Screen Image -->
-  <section class="hero-fullscreen">
-    <div class="hero-fullscreen-bg"></div>
-    <div class="hero-fullscreen-content">
-      <div class="container hero-container">
-        <h1 class="hero-title">
-          {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-        </h1>
-        <p class="hero-subtitle">{{ page.subtitle }}</p>
-        <div class="hero-bio">
-          <p>南京大学新闻传播学院攻读传播学硕士（2025–2028）</p>
-          <p>研究方向：计算社会、科技伦理、社会理论</p>
-          <p>像我的偶像钱学森一样，做一个大成智慧学硕士，对人类认知的增长做出一点点贡献</p>
-        </div>
+<!-- Hero Section with Full Screen Image - OUTSIDE the container -->
+<section class="hero-fullscreen">
+  <div class="hero-fullscreen-bg"></div>
+  <div class="hero-fullscreen-content">
+    <div class="hero-container">
+      <h1 class="hero-title">
+        {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+      </h1>
+      <p class="hero-subtitle">{{ page.subtitle }}</p>
+      <div class="hero-bio">
+        <p>南京大学新闻传播学院攻读传播学硕士（2025–2028）</p>
+        <p>研究方向：计算社会、科技伦理、社会理论</p>
+        <p>像我的偶像钱学森一样，做一个大成智慧学硕士，对人类认知的增长做出一点点贡献</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Main Content -->
+<!-- Main Content - Inside a normal container -->
+<div class="post about-page">
   <div class="container main-content">
     <div class="row">
       <!-- Left Sidebar -->
@@ -95,4 +95,5 @@ layout: default
     </div>
   </div>
 </div>
+
 
