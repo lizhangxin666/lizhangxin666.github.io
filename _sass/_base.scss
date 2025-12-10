@@ -154,55 +154,55 @@ blockquote {
 .about-sidebar {
   background-color: var(--global-bg-color);
   border-right: 1px solid var(--global-divider-color);
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 2rem 0;
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .profile-container {
   width: 100%;
-  max-width: 200px;
-  margin: 0 auto;
-  text-align: center;
+  margin: 0;
+  text-align: left;
+  padding-left: 1.5rem;
 }
 
 .profile-img {
   width: 100%;
   max-width: 150px;
   height: auto;
-  margin: 0 auto 1.5rem;
+  margin: 0 0 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 3px solid var(--global-bg-color);
   display: block;
 }
 
 .about-sidebar .address {
-  margin: 1rem auto;
+  margin: 1rem 0;
   font-size: 0.9rem;
   line-height: 1.5;
   color: var(--global-text-color);
-  text-align: center;
+  text-align: left;
 }
 
 .social-sidebar {
   margin-top: 2rem;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  padding-left: 1.5rem;
 }
 
 .social-sidebar .contact-icons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 1rem;
-  margin: 0 auto 1rem;
-  width: fit-content;
+  margin: 0 0 1rem;
+  width: 100%;
 }
 
 .social-sidebar .contact-icons a {
