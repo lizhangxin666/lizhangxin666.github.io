@@ -152,62 +152,56 @@ blockquote {
 // Hero Section Styles
 
 .about-page {
-  // Ensure no margin or padding on the entire page
-  margin: 0 !important;
-  padding: 0 !important;
-
-  // Fix container width
-  .container {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
+  // Ensure no margin or padding on the main container
+  & > div.container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
   }
 
-  // Full width hero section
+  // Hero Section - Adjusted Height
   .hero-fullscreen {
     position: relative;
-    width: 100vw !important;
-    height: 60vh;
+    width: 100vw;
+    height: 60vh; // 降低高度，不再占据整个视口
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 !important;
-    padding: 0 !important;
-    // Ensure it breaks out of any container constraints
+    margin: 0;
+    padding: 0;
     left: 50%;
-    transform: translateX(-50%);
-    right: 0;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 
-  // Full width background image
   .hero-fullscreen-bg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw !important;
+    width: 100%;
     height: 100%;
     background-image: url('https://user-images.githubusercontent.com/543384/178952701-6e595809-3059-41d4-9d88-356a9b339445.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
-    // Ensure full coverage
-    left: 50%;
-    transform: translateX(-50%);
+    // Remove fixed attachment to avoid scrolling issues
+    background-attachment: scroll;
   }
 
-  // Content container
   .hero-fullscreen-content {
     position: relative;
     z-index: 1;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 3rem 2rem;
-    margin: 0 !important;
-    max-width: 100% !important;
+    padding: 3rem 2rem; // 减少内边距
+    // Ensure content is centered but not too wide
+    max-width: 100%;
+    // Add a subtle gradient overlay for better text readability
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   }
 
   .hero-container {
@@ -1421,4 +1415,6 @@ nav[data-toggle="toc"] {
     padding-top: 0.5rem;
   }
 }
+
+
 
