@@ -3,84 +3,99 @@ layout: default
 ---
 
 <!-- about.html -->
-      <div class="post">
-        <div class="container">
-          <div class="row">
-            <!-- Left Sidebar -->
-            <div class="col-md-3 about-sidebar">
-              <div class="profile-container">
-                <!-- Profile Image -->
-                {% if page.profile -%}
-                  {%- if page.profile.image %}
-                    {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
-                    {% if page.profile.image_circular %}
-                      {%- assign profile_image_class = "img-fluid rounded-circle profile-img" -%}
-                    {% else %}
-                      {%- assign profile_image_class = "img-fluid rounded profile-img" -%}
-                    {% endif %}
-                    {% include figure.html
-                    path=profile_image_path
-                    class=profile_image_class
-                    alt=page.profile.image
-                    cache_bust=true -%}
-                  {% endif -%}
-                {%- endif %}
+<div class="post">
+  <!-- Hero Section with Full Screen Image -->
+  <section class="hero-fullscreen">
+    <div class="hero-fullscreen-bg"></div>
+    <div class="hero-fullscreen-content">
+      <div class="container hero-container">
+        <h1 class="hero-title">
+          {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+        </h1>
+        <p class="hero-subtitle">{{ page.subtitle }}</p>
+        <div class="hero-bio">
+          <p>南京大学新闻传播学院攻读传播学硕士（2025–2028）</p>
+          <p>研究方向：计算社会、科技伦理、社会理论</p>
+          <p>像我的偶像钱学森一样，做一个大成智慧学硕士，对人类认知的增长做出一点点贡献</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Address -->
-                {%- if page.profile.address %}
-                  <div class="address">
-                    {{ page.profile.address }}
-                  </div>
-                {%- endif %}
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <!-- Left Sidebar -->
+      <div class="col-md-3 about-sidebar">
+        <div class="profile-container">
+          <!-- Profile Image -->
+          {% if page.profile -%}
+            {%- if page.profile.image %}
+              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+              {% if page.profile.image_circular %}
+                {%- assign profile_image_class = "img-fluid rounded-circle profile-img" -%}
+              {% else %}
+                {%- assign profile_image_class = "img-fluid rounded profile-img" -%}
+              {% endif %}
+              {% include figure.html
+              path=profile_image_path
+              class=profile_image_class
+              alt=page.profile.image
+              cache_bust=true -%}
+            {% endif -%}
+          {%- endif %}
 
-                <!-- Social Icons -->
-                <div class="social-sidebar">
-                  <div class="contact-icons">
-                    {% include social.html %}
-                  </div>
-                  {% if site.contact_note %}
-                    <div class="contact-note">
-                      {{ site.contact_note }}
-                    </div>
-                  {% endif %}
-                </div>
+          <!-- Address -->
+          {%- if page.profile.address %}
+            <div class="address">
+              {{ page.profile.address }}
+            </div>
+          {%- endif %}
+
+          <!-- Social Icons -->
+          <div class="social-sidebar">
+            <div class="contact-icons">
+              {% include social.html %}
+            </div>
+            {% if site.contact_note %}
+              <div class="contact-note">
+                {{ site.contact_note }}
               </div>
-            </div>
-
-            <!-- Right Content -->
-            <div class="col-md-9 about-content">
-              <header class="post-header">
-                <h1 class="post-title">
-                  {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-                </h1>
-                <p class="desc">{{ page.subtitle }}</p>
-              </header>
-
-              <article>
-                <div>
-                  {{ content }}
-                </div>
-
-                <!-- News -->
-                {% if page.news and site.announcements.enabled -%}
-                  <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
-                  {%- include news.html limit=true %}
-                {%- endif %}
-
-                <!-- Latest posts -->
-                {% if page.latest_posts -%}
-                  <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-                  {%- include latest_posts.html %}
-                {%- endif %}
-
-                <!-- Selected papers -->
-                {% if page.selected_papers -%}
-                  <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
-                  {%- include selected_papers.html %}
-                {%- endif %}
-              </article>
-            </div>
+            {% endif %}
           </div>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="col-md-9 about-content">
+        <article>
+          <div>
+            {{ content }}
+          </div>
+
+          <!-- News -->
+          {% if page.news and site.announcements.enabled -%}
+            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
+            {%- include news.html limit=true %}
+          {%- endif %}
+
+          <!-- Latest posts -->
+          {% if page.latest_posts -%}
+            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
+            {%- include latest_posts.html %}
+          {%- endif %}
+
+          <!-- Selected papers -->
+          {% if page.selected_papers -%}
+            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+            {%- include selected_papers.html %}
+          {%- endif %}
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
 
