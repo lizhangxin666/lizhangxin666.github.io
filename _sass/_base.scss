@@ -149,6 +149,109 @@ blockquote {
   }
 }
 
+// About Page Sidebar Layout
+
+.about-sidebar {
+  background-color: var(--global-bg-color);
+  border-right: 1px solid var(--global-divider-color);
+  padding: 2rem 1.5rem;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--global-bg-color);
+}
+
+.about-sidebar .address {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--global-text-color);
+}
+
+.social-sidebar {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.social-sidebar .contact-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-sidebar .contact-icons a {
+  font-size: 1.5rem;
+  color: var(--global-text-color);
+  transition: all 0.3s ease;
+}
+
+.social-sidebar .contact-icons a:hover {
+  color: var(--global-theme-color);
+  transform: translateY(-3px);
+}
+
+.social-sidebar .contact-note {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.about-content {
+  padding: 2rem;
+  background-color: var(--global-bg-color);
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .about-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--global-divider-color);
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .about-content {
+    padding: 1.5rem;
+  }
+
+  .profile-container {
+    max-width: 100%;
+  }
+
+  .profile-img {
+    max-width: 150px;
+  }
+
+  .social-sidebar .contact-icons {
+    gap: 0.8rem;
+  }
+
+  .social-sidebar .contact-icons a {
+    font-size: 1.3rem;
+  }
+}
+
 .post-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;
@@ -160,6 +263,104 @@ blockquote {
       color: var(--global-theme-color);
       text-decoration: none;
     }
+  }
+}
+
+// About Content Typography
+
+.about-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--global-theme-color);
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--global-divider-color);
+}
+
+.about-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1.25rem;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--global-text-color);
+}
+
+.about-content blockquote {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-left: 4px solid var(--global-theme-color);
+  background-color: var(--global-card-bg-color);
+  font-style: italic;
+}
+
+.about-content ul,
+.about-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.about-content li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.about-content li ul,
+.about-content li ol {
+  margin: 0.75rem 0;
+}
+
+.about-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+// Enhance FAQ Section
+
+.about-content h3 {
+  color: var(--global-theme-color);
+}
+
+.about-content h3 + ol,
+.about-content h3 + ul {
+  margin-top: 1rem;
+}
+
+.about-content ol ol,
+.about-content ul ul {
+  padding-left: 1.5rem;
+}
+
+// Responsive Typography
+
+@media (max-width: 768px) {
+  .about-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.35rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
   }
 }
 
