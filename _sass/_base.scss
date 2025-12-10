@@ -159,11 +159,11 @@ blockquote {
     max-width: 100%;
   }
 
-  // Fullscreen Hero Section
+  // Hero Section - Adjusted Height
   .hero-fullscreen {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 60vh; // 降低高度，不再占据整个视口
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -187,8 +187,8 @@ blockquote {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
-    // Ensure the image covers the entire area
-    background-attachment: fixed;
+    // Remove fixed attachment to avoid scrolling issues
+    background-attachment: scroll;
   }
 
   .hero-fullscreen-content {
@@ -197,9 +197,11 @@ blockquote {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem; // 减少内边距
     // Ensure content is centered but not too wide
     max-width: 100%;
+    // Add a subtle gradient overlay for better text readability
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   }
 
   .hero-container {
