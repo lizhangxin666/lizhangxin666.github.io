@@ -152,14 +152,28 @@ blockquote {
 // Hero Section Styles
 
 .about-page {
+  // Ensure no margin or padding on the main container
+  & > div.container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  // Fullscreen Hero Section
   .hero-fullscreen {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 
   .hero-fullscreen-bg {
@@ -173,6 +187,8 @@ blockquote {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
+    // Ensure the image covers the entire area
+    background-attachment: fixed;
   }
 
   .hero-fullscreen-content {
@@ -182,11 +198,15 @@ blockquote {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 4rem 2rem;
+    // Ensure content is centered but not too wide
+    max-width: 100%;
   }
 
   .hero-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    // Ensure content has some margin on large screens
+    padding: 0 2rem;
   }
 
   .hero-title {
