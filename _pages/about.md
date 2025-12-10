@@ -11,7 +11,7 @@ profile:
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false  # includes social icons at the bottom of the page
+social: true  # includes social icons in the sidebar
 ---
 # 李张欣 · 夜鹭飒冷
 
@@ -22,6 +22,8 @@ social: false  # includes social icons at the bottom of the page
 **[Idea]** 像我的偶像钱学森一样，做一个大成智慧学硕士，对人类认知的增长做出一点点贡献📈  
 **[Fun]** 🐦 观鸟，🏊🏻 游泳，🐱撸猫，🏋🏻健身，⚔️ 武当武术，🌏历史地理  
 **[Secret]** 其实夜鹭才是我的本体
+
+![夜鹭飒冷](https://oss-pai-5acg3uabpbcfgi2vaf-cn-shanghai.oss-cn-shanghai.aliyuncs.com/uPic/%E5%A4%9C%E9%B9%AD%E9%A3%92%E5%86%B7.jpeg){: width="25%" align="middle"}
 
 加载更多关于我的 FAQ。。。
 
