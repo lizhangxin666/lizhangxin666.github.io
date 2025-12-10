@@ -151,133 +151,111 @@ blockquote {
 
 // Hero Section Styles
 
-// Hero Section Styles - Full Width Independent Style
-
-// Simplified approach to ensure full-width hero without horizontal scroll
-
-// Make sure the html and body have no default margins/paddings
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden !important; // Prevent horizontal scrollbar globally
-  width: 100%;
-  max-width: 100%;
-}
-
-// Hero Section - Full width with no overflow
-.hero-fullscreen {
-  position: relative;
-  width: 100%;
-  height: 50vh; // Set appropriate height
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  right: 0;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-// Hero background - Use background-size: cover to fill the hero area without overflow
-.hero-fullscreen-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://user-images.githubusercontent.com/543384/178952701-6e595809-3059-41d4-9d88-356a9b339445.png');
-  background-size: cover; // This ensures the image covers the entire area without stretching
-  background-position: center center; // Center the image
-  background-repeat: no-repeat;
-  z-index: 0;
-  background-attachment: scroll;
-}
-
-.hero-fullscreen-bg {
-  position: absolute;
-  top: 0;
-  left: 50%; // Center horizontally
-  width: 100vw; // Full viewport width
-  height: 100%;
-  background-image: url('https://user-images.githubusercontent.com/543384/178952701-6e595809-3059-41d4-9d88-356a9b339445.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
-  // Remove fixed attachment to avoid scrolling issues
-  background-attachment: scroll;
-  // Center the background image and ensure it doesn't cause overflow
-  transform: translateX(-50%);
-}
-
-.hero-fullscreen-content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 3rem 2rem; // Reduce padding
-  // Ensure content is centered but not too wide
-  max-width: 100%;
-  // Add a subtle gradient overlay for better text readability
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
-  box-sizing: border-box;
-}
-
-.hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  // Ensure content has some margin on large screens
-  padding: 0 2rem;
-  box-sizing: border-box;
-}
-
-.hero-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: white;
-  line-height: 1.2;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-bio {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-bio p {
-  margin-bottom: 0.75rem;
-}
-
-// About Page Styles
 .about-page {
+  // Reset all margins and paddings for the About page container
+  & > div.container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  
   // Reset post margin
-  margin: 0;
-  padding: 0;
-}
+  & {
+    margin: 0;
+    padding: 0;
+  }
 
-// Main Content Section
-.main-content {
-  background-color: var(--global-bg-color);
-  padding: 3rem 2rem;
-  margin-top: -2rem;
-  position: relative;
-  z-index: 2;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-  // Ensure main content has proper width
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
+  // Hero Section - Fixed Height and Position
+  .hero-fullscreen {
+    position: relative;
+    width: 100%;
+    height: 50vh; // 设置合适的高度
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-fullscreen-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://user-images.githubusercontent.com/543384/178952701-6e595809-3059-41d4-9d88-356a9b339445.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    // Remove fixed attachment to avoid scrolling issues
+    background-attachment: scroll;
+  }
+
+  .hero-fullscreen-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 3rem 2rem; // 减少内边距
+    // Ensure content is centered but not too wide
+    max-width: 100%;
+    // Add a subtle gradient overlay for better text readability
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    // Ensure content has some margin on large screens
+    padding: 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .hero-bio {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .hero-bio p {
+    margin-bottom: 0.75rem;
+  }
+
+  // Main Content Section
+  .main-content {
+    background-color: var(--global-bg-color);
+    padding: 3rem 2rem;
+    margin-top: -2rem;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    // Ensure main content has proper width
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 // About Page Sidebar Layout
