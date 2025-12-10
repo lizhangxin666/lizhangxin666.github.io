@@ -2,7 +2,7 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
-// Typography
+// Typography & Base Elements
 
 p,
 h1,
@@ -19,24 +19,90 @@ strong {
   color: var(--global-text-color);
 }
 
-hr {
-  border-top: 1px solid var(--global-divider-color);
+// 统一页面标题风格 (让通用页面继承首页的排版美学)
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--global-theme-color);
+  letter-spacing: -0.02em; 
 }
 
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 3rem;      
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--global-divider-color); // 增加分割线
+  color: var(--global-text-color);
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--global-theme-color); // 用主题色突出
+}
+
+// 优化正文阅读体验
+p, li {
+  line-height: 1.75; 
+  font-size: 1.05rem;
+}
+
+hr {
+  border-top: 1px solid var(--global-divider-color);
+  margin: 2rem 0;
+}
+
+// Tables (优化后的表格样式，用于技能树)
+
 table {
-  td,
-  th {
-    font-size: 1rem;
+  width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0;
+  margin: 2rem 0;
+  font-size: 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px; 
+  overflow: hidden;   
+
+  th, td {
+    padding: 12px 15px; 
+    border-bottom: 1px solid var(--global-divider-color);
+    vertical-align: middle; // 垂直居中
   }
 
   th {
-    font-weight: bold;
+    background-color: var(--global-card-bg-color); 
+    font-weight: 600;
+    text-align: left;
+    color: var(--global-theme-color);
+    border-right: 1px solid var(--global-divider-color); 
+  }
+  
+  // 第一列（领域）样式
+  td:first-child {
+    font-weight: 600;
+    background-color: rgba(0,0,0,0.02); 
+    width: 20%; 
+    min-width: 120px;
+    color: var(--global-text-color);
+    border-right: 1px solid var(--global-divider-color);
+  }
+  
+  tr:last-child td {
+    border-bottom: none; 
   }
 }
 
 a,
 table.table a {
   color: var(--global-theme-color);
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     color: var(--global-theme-color);
@@ -52,17 +118,34 @@ table.table a {
   background-color: transparent;
 }
 
+// Images
+
 figure,
 img {
-  max-width: 90vw;
+  max-width: 100%; // 修复：限制在容器内，防止溢出
+  height: auto;
+  border-radius: 6px; 
 }
 
+// Blockquote (优化为卡片风格，用于展示产品链接)
+
 blockquote {
-  background: var(--global-bg-color);
-  border-left: 2px solid var(--global-theme-color);
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  font-size: 1.2rem;
+  background: var(--global-card-bg-color);
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0 6px 6px 0;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: var(--global-text-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    font-weight: 600;
+  }
 }
 
 // Math
@@ -153,12 +236,12 @@ blockquote {
 
 .hero-fullscreen {
   position: relative;
-  width: 100%;             // 铺满屏幕宽度
-  height: 40vh;            // 高度占视口 60%
-  min-height: 250px;       // 最小高度
+  width: 100%;             
+  height: 40vh;            
+  min-height: 250px;       
   
   background-size: cover;
-  background-position: center 76%; // 稍微向上对齐一点，避免人脸被切掉
+  background-position: center 20%; 
   background-repeat: no-repeat;
   
   display: flex;
@@ -168,37 +251,33 @@ blockquote {
   margin-bottom: 3rem;     
 }
 
-// 遮罩层
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); // 0.5 的黑色半透明，可根据图片亮度调整
+  background: rgba(0, 0, 0, 0.5); 
   z-index: 1;
 }
 
-// 内部文字容器
 .hero-container {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-left: 15px;      // 对应 Bootstrap container 的 padding
+  padding-left: 15px;      
   padding-right: 15px;
   text-align: left;        
 }
 
-// 标题文字
 .hero-title {
   color: #fff !important;
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5); // 增加文字阴影，更易读
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5); 
 }
 
-// 副标题
 .hero-subtitle {
   color: rgba(255, 255, 255, 0.95) !important;
   font-size: 1.5rem;
@@ -206,7 +285,6 @@ blockquote {
   font-weight: 300;
 }
 
-// 个人简介
 .hero-bio {
   color: rgba(255, 255, 255, 0.9) !important;
   font-size: 1.1rem;
@@ -215,19 +293,18 @@ blockquote {
   
   p {
     margin-bottom: 0.5rem;
-    color: inherit; // 继承父级白色
+    color: inherit; 
   }
 }
 
-// 手机端适配
 @media (max-width: 768px) {
   .hero-fullscreen {
-    height: auto;       // 手机上高度自动，避免内容溢出
-    padding: 6rem 0;    // 上下留足空间
+    height: auto;       
+    padding: 6rem 0;    
   }
   
   .hero-title {
-    font-size: 2rem;    // 手机上标题字号改小
+    font-size: 2rem;    
   }
   
   .hero-subtitle {
@@ -1398,5 +1475,3 @@ nav[data-toggle="toc"] {
     padding-top: 0.5rem;
   }
 }
-
-
