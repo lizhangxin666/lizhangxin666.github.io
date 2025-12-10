@@ -16,10 +16,10 @@
     {%- include header.html %}
 
     <!-- Content -->
-    <div class="container mt-5">
+    <div class="container">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == "right" %}
-        <div class="row">
+        <div class="row mt-5">
           <!-- main content area -->
           <div class="col-sm-9">
             {{ content }}
@@ -30,7 +30,7 @@
           </div>
         </div>
         {% else %}
-        <div class="row">
+        <div class="row mt-5">
           <!-- sidebar, which will move to the top on a small screen -->
           <div class="col-sm-3">
             <nav id="toc-sidebar" class="sticky-top"></nav>
@@ -60,3 +60,4 @@
     {% include scripts/progressBar.html %}
   </body>
 </html>
+
