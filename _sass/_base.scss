@@ -154,7 +154,7 @@ blockquote {
 .about-sidebar {
   background-color: var(--global-bg-color);
   border-right: 1px solid var(--global-divider-color);
-  padding: 2rem;
+  padding: 2rem 1.5rem 2rem 0;
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
@@ -168,23 +168,14 @@ blockquote {
   width: 100%;
   margin: 0;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.profile-container figure {
-  margin: 0 0 1.5rem 0 !important;
-  padding: 0;
-  width: 100%;
-  max-width: 150px;
+  padding-left: 1.5rem;
 }
 
 .profile-img {
   width: 100%;
   max-width: 150px;
   height: auto;
-  margin: 0 !important;
+  margin: 0 0 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 3px solid var(--global-bg-color);
   display: block;
@@ -202,9 +193,7 @@ blockquote {
   margin-top: 2rem;
   width: 100%;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  padding-left: 1.5rem;
 }
 
 .social-sidebar .contact-icons {
@@ -212,20 +201,9 @@ blockquote {
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 0 0 1rem 0 !important;
+  margin: 0 0 1rem;
   width: 100%;
 }
-
-.social-sidebar .contact-icons a {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.social-sidebar .contact-note {
-  text-align: left !important;
-  margin: 0.5rem 0 0 0 !important;
-}
-
 
 .social-sidebar .contact-icons a {
   font-size: 1.5rem;
@@ -1269,3 +1247,4 @@ nav[data-toggle="toc"] {
     padding-top: 0.5rem;
   }
 }
+
