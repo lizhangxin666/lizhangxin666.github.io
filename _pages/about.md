@@ -23,8 +23,6 @@ social: true  # includes social icons in the sidebar
 **[Fun]** 🐦 观鸟，🏊🏻 游泳，🐱撸猫，🏋🏻健身，⚔️ 武当武术，🌏历史地理  
 **[Secret]** 其实夜鹭才是我的本体
 
-![夜鹭飒冷](https://oss-pai-5acg3uabpbcfgi2vaf-cn-shanghai.oss-cn-shanghai.aliyuncs.com/uPic/%E5%A4%9C%E9%B9%AD%E9%A3%92%E5%86%B7.jpeg){: width="25%" align="middle"}
-
 加载更多关于我的 FAQ。。。
 
 ### 01 身份与性格 (Who am I)
