@@ -154,8 +154,8 @@ blockquote {
 .hero-fullscreen {
   position: relative;
   width: 100%;             // 铺满屏幕宽度
-  height: 60vh;            // 高度占视口 60%
-  min-height: 400px;       // 最小高度
+  height: 40vh;            // 高度占视口 60%
+  min-height: 250px;       // 最小高度
   
   background-size: cover;
   background-position: center 20%; // 稍微向上对齐一点，避免人脸被切掉
@@ -376,8 +376,8 @@ blockquote {
   }
   
   .hero-fullscreen {
-    height: 40vh;
-    min-height: 300px;
+    height: auto;
+    min-height: 100vh;
   }
   
   .hero-title {
