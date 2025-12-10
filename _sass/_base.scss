@@ -151,110 +151,87 @@ blockquote {
 
 // Hero Section Styles
 
-.about-page {
-  // Reset all margins and paddings for the About page container
-  & > div.container {
-    padding: 0 !important;
-    margin: 0 !important;
-    max-width: 100% !important;
+.hero-fullscreen {
+  position: relative;
+  width: 100%;             // 铺满屏幕宽度
+  height: 60vh;            // 高度占视口 60%
+  min-height: 400px;       // 最小高度
+  
+  background-size: cover;
+  background-position: center 20%; // 稍微向上对齐一点，避免人脸被切掉
+  background-repeat: no-repeat;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 3rem;     
+}
+
+// 遮罩层
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); // 0.5 的黑色半透明，可根据图片亮度调整
+  z-index: 1;
+}
+
+// 内部文字容器
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-left: 15px;      // 对应 Bootstrap container 的 padding
+  padding-right: 15px;
+  text-align: left;        
+}
+
+// 标题文字
+.hero-title {
+  color: #fff !important;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5); // 增加文字阴影，更易读
+}
+
+// 副标题
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+// 个人简介
+.hero-bio {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  
+  p {
+    margin-bottom: 0.5rem;
+    color: inherit; // 继承父级白色
+  }
+}
+
+// 手机端适配
+@media (max-width: 768px) {
+  .hero-fullscreen {
+    height: auto;       // 手机上高度自动，避免内容溢出
+    padding: 6rem 0;    // 上下留足空间
   }
   
-  // Reset post margin
-  & {
-    margin: 0;
-    padding: 0;
-  }
-
-  // Hero Section - Fixed Height and Position
-  .hero-fullscreen {
-    position: relative;
-    width: 100%;
-    height: 50vh; // 设置合适的高度
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    right: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .hero-fullscreen-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://user-images.githubusercontent.com/543384/178952701-6e595809-3059-41d4-9d88-356a9b339445.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-    // Remove fixed attachment to avoid scrolling issues
-    background-attachment: scroll;
-  }
-
-  .hero-fullscreen-content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 3rem 2rem; // 减少内边距
-    // Ensure content is centered but not too wide
-    max-width: 100%;
-    // Add a subtle gradient overlay for better text readability
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
-  }
-
-  .hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    // Ensure content has some margin on large screens
-    padding: 0 2rem;
-  }
-
   .hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: white;
-    line-height: 1.2;
+    font-size: 2rem;    // 手机上标题字号改小
   }
-
+  
   .hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  .hero-bio {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  .hero-bio p {
-    margin-bottom: 0.75rem;
-  }
-
-  // Main Content Section
-  .main-content {
-    background-color: var(--global-bg-color);
-    padding: 3rem 2rem;
-    margin-top: -2rem;
-    position: relative;
-    z-index: 2;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-    // Ensure main content has proper width
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.2rem;
   }
 }
 
