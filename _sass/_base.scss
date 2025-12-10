@@ -152,28 +152,34 @@ blockquote {
 // Hero Section Styles
 
 .about-page {
-  // Ensure no margin or padding on the main container
+  // Reset all margins and paddings for the About page container
   & > div.container {
-    padding: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  // Reset post margin
+  & {
     margin: 0;
-    max-width: 100%;
+    padding: 0;
   }
 
-  // Hero Section - Adjusted Height
+  // Hero Section - Fixed Height and Position
   .hero-fullscreen {
     position: relative;
-    width: 100vw;
-    height: 60vh; // 降低高度，不再占据整个视口
+    width: 100%;
+    height: 50vh; // 设置合适的高度
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .hero-fullscreen-bg {
