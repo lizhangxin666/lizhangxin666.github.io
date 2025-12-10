@@ -153,18 +153,26 @@ blockquote {
 
 // Hero Section Styles - Full Width Independent Style
 
-// Make sure the body has no default margins that could affect the hero
-body {
+// Global reset to ensure no horizontal scroll
+* {
+  box-sizing: border-box;
+}
+
+// Make sure the html and body have no default margins that could affect the hero
+html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden !important; // Prevent horizontal scrollbar globally
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 // Hero Section - Fixed Height and Position (independent of .about-page container)
 .hero-fullscreen {
   position: relative;
-  width: 100vw; // Full viewport width
+  width: 100% !important; // Full width without causing horizontal scroll
   height: 50vh; // Set appropriate height
-  overflow: hidden;
+  overflow: hidden !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,15 +181,17 @@ body {
   left: 0 !important;
   right: 0 !important;
   // Remove any potential constraints from parent elements
-  max-width: none !important;
+  max-width: 100% !important;
   box-sizing: border-box !important;
+  // Ensure no horizontal scrollbar
+  overflow-x: hidden !important;
 }
 
 .hero-fullscreen-bg {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%; // Center horizontally
+  width: 100vw; // Full viewport width
   height: 100%;
   background-image: url('https://user-images.githubusercontent.com/543384/178952701-6e595809-3059-41d4-9d88-356a9b339445.png');
   background-size: cover;
@@ -190,6 +200,8 @@ body {
   z-index: 0;
   // Remove fixed attachment to avoid scrolling issues
   background-attachment: scroll;
+  // Center the background image and ensure it doesn't cause overflow
+  transform: translateX(-50%);
 }
 
 .hero-fullscreen-content {
