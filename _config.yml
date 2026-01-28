@@ -263,8 +263,8 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['formatting', 'images', 'links', 'math', 'code'] # these tags will be displayed on the front page of your blog
-display_categories: ['blockquotes'] # these categories will be displayed on the front page of your blog
+display_tags: ['日常解剖室', '社会观察', '情感', 'AI', '传播学', '心理'] # these tags will be displayed on the front page of your blog
+display_categories: ['日常解剖室', '情感与关系', '社会观察', '科技与传播', 'AI实践'] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
