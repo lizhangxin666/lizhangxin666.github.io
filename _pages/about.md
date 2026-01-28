@@ -5,7 +5,7 @@ permalink: /
 subtitle: 
 profile:
   align: right
-  image: avatar.jpeg
+  image: avatar_optimized.jpg
   image_circular: true # crops the image to make it circular
   address: 
 news: false  # includes a list of news items
