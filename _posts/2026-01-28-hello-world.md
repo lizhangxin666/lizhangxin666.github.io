@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "你好，世界！(Hello World)"
-date:   2026-01-28 10:00:00 +0800
+date:   2025-12-28 10:00:00 +0800
 description: 这是你的第一篇随笔
 tags: [随笔, 生活]
 categories: [日常]
