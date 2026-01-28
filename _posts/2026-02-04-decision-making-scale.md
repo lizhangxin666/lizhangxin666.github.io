@@ -10,7 +10,6 @@ categories: [社会观察]
 ![头图](https://oss-pai-5acg3uabpbcfgi2vaf-cn-shanghai.oss-cn-shanghai.aliyuncs.com/uPic/%E5%A4%B4%E5%9B%BE.jpeg)
 
 
-> [!question]
 > 生活中的原始疑问：
 >
 > 为什么个体或小群体做决策时，总会带着强烈的责任感，刻意把事情发展控制在自己可控范围内？比如论文与 AI 协作时，最终提交的版本一定会是自己能理解、能掌握的；小群体做决策时，也往往不会让 AI “掷骰子” 随机定夺，而是倾向开民主战略决策会来把控过程。虽然决策结果不一定比AI更高明。
