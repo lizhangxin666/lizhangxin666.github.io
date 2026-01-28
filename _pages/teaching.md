@@ -7,22 +7,18 @@ nav: true
 nav_order: 5
 ---
 
-## 🎯 近期关注 | Current Focus
-
 > 这里记录了我目前正在投入精力学习的理论、探索的技术工具以及思考的问题。
 > *Last updated: December 2025*
 
 ### **理论与方法论 (Theory & Methodology)**
 * **因果推断 (Causal Inference)**
-  致力于将 PSM (倾向性评分匹配)、IPW (逆概率加权) 等统计方法引入传播学研究，探索社会科学研究从“相关性”迈向“因果性”的解释路径。
+  探索社会科学研究从“相关性”迈向“因果性”的解释路径。
 * **AI 史学 (AI Historiography)**
   尝试构建“意义压缩”与“结构压缩”的理论框架，探索将深度学习应用于历史语义网络分析的新范式。
 
 ### **工程与技术探索 (Engineering & Tech)**
 * **AIGC 架构设计**
-  超越基础 Prompt 工程，深度实践 **RAG (检索增强生成)** 与 **Multi-Agent (多智能体)** 协作系统，专注于将复杂业务逻辑封装为自动化的 AI 工作流。
-* **全栈与设计**
-  结合 Jekyll、HTML/CSS 与 Python 数据流，探索“人文理性”设计美学在 Web 端的技术实现。
+  超越基础 Prompt 工程，深度实践 **Skill** 与 **GUI** 人机协作，专注于将复杂业务逻辑封装为自动化的 AI 工作流。
 
 ### **批判性视角 (Critical Perspectives)**
 * **数字史学与游戏研究**
@@ -35,7 +31,6 @@ nav_order: 5
 ### **公共学术 (Public Scholarship)**
 * **AI 跨学科普及**
   正在撰写面向人文社科背景学生的 AI 方法论指南，致力于技术祛魅与工具理性的普惠。
-
 
 <br>
 <a href="https://github.com/SocratesClub/SocratesClub.github.io/edit/master/_pages/teaching.md">
