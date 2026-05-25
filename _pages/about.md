@@ -74,6 +74,7 @@ social: true  # includes social icons in the sidebar
 
 3. 你的“能量补给”方式是什么？
    - 感受自然，撸猫，观鸟，晒太阳，练剑
+
 ------
 
 #### English Bio
