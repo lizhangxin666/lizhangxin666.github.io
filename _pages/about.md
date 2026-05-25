@@ -13,7 +13,7 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons in the sidebar
 ---
-# 李张欣 · 夜鹭飒冷
+# 李张欣
 
 > 夜鹭的影，裹着飒冷的月光，不与白昼争喧，一个在不确定时代尝试做并记录思维实验的研究者
 > 
