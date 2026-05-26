@@ -16,7 +16,7 @@ nav_order: 5
 
 ---
 
-# AI × 感知 (AI × Perception)
+## AI × 感知 (AI × Perception)
 
 * **AI介导感知 (AI-mediated Perception)**  
   关注 AI 如何重新塑造人与现实世界之间的感知关系，探索环境、生态与身体经验如何成为 AI 交互的一部分。
@@ -29,7 +29,7 @@ nav_order: 5
 
 ---
 
-# AI × 社会结构 (AI × Social Systems)
+## AI × 社会结构 (AI × Social Systems)
 
 * **AI原生社会性 (AI-native Sociality)**  
   关注 AI 不仅作为工具协助人类，而是如何形成具有身份、关系与协作机制的“AI原生社会结构”。
@@ -42,7 +42,7 @@ nav_order: 5
 
 ---
 
-# AI × 象征系统 (AI × Symbolic Systems)
+## AI × 象征系统 (AI × Symbolic Systems)
 
 * **共同体叙事与家庭隐喻 (Community Narratives & Family Metaphors)**  
   结合计算传播与数字人文方法，研究“家国同构”等家庭隐喻如何参与现代政治共同体与国家形象建构。
@@ -55,7 +55,7 @@ nav_order: 5
 
 ---
 
-# AI × 叙事与世界构建 (AI × Narrative & Worldbuilding)
+## AI × 叙事与世界构建 (AI × Narrative & Worldbuilding)
 
 * **叙事驱动 AI 系统 (Narrative-driven AI Systems)**  
   关注 AI 产品不仅作为功能工具存在，而是成为具有规则、角色与叙事逻辑的“世界”。
@@ -68,7 +68,7 @@ nav_order: 5
 
 ---
 
-# AI × 历史与文明尺度 (AI × Civilizational Scale)
+## AI × 历史与文明尺度 (AI × Civilizational Scale)
 
 * **文明结构与长期演化 (Civilizational Structures & Long-term Evolution)**  
   关注 AI 如何在更长时间尺度上影响历史解释、社会组织与文明结构。
@@ -84,10 +84,10 @@ nav_order: 5
 
 ---
 
-# 项目经历
+## 项目经历
 
-## 「此刻志」—— AI现实感知系统
-### 发起人 / 交互研究者
+### 「此刻志」—— AI现实感知系统
+#### 发起人 / 交互研究者
 
 设计并持续迭代一套基于 AI 的现实感知系统，尝试将天气、天文、鸟类、植物季节变化等环境信号转化为实时感知触发与行动提示，探索 AI 如何重新连接人与现实世界之间的关系。
 
@@ -114,8 +114,8 @@ nav_order: 5
 
 ---
 
-## 「龙虾夜校（Night School）」—— AI Agent 社会化沙盒
-### 创始人 / 产品设计
+### 「龙虾夜校（Night School）」—— AI Agent 社会化沙盒
+#### 创始人 / 产品设计
 
 构建了一套 AI Agent 社会化成长系统，让 AI “龙虾学生”进入不同主题班级完成探索、互动与协作，并在夜间自主生成“晨报”。
 
@@ -154,8 +154,8 @@ GitHub：
 
 ---
 
-## AgentSociety 行为模拟智能体（FinalAgent）
-### 研究者 / 系统设计
+### AgentSociety 行为模拟智能体（FinalAgent）
+#### 研究者 / 系统设计
 
 基于 AgentSociety 框架开发模拟决策智能体（FinalAgent），用于生成更贴近现实的人类日常移动与行为模式，探索 LLM 在社会行为模拟中的应用。
 
@@ -185,7 +185,7 @@ GitHub：
 
 ---
 
-# 理论与方法论 (Theory & Methodology)
+## 理论与方法论 (Theory & Methodology)
 
 * **因果推断 (Causal Inference)**  
   探索社会科学研究从“相关性”迈向“因果性”的解释路径。
@@ -195,7 +195,7 @@ GitHub：
 
 ---
 
-# 批判性视角 (Critical Perspectives)
+## 批判性视角 (Critical Perspectives)
 
 * **数字史学与游戏研究**  
   以《十字军之王3（CK3）》为切口，批判性分析游戏引擎中的欧洲中心主义与历史叙事的数字化重构。
