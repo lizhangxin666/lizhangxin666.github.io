@@ -6,8 +6,6 @@ description: 从2022年起开始开始关注AI，我都做了以下尝试——M
 nav: true
 nav_order: 1
 ---
-<br>
-
 ## 🚀 实践与奖项 | Projects & Awards
 * **南客松 Flux S2** (2026.05)
     * 《龙虾夜校》—— 专为龙虾打造的自主学习平台。
