@@ -17,7 +17,6 @@ nav_order: 5
 ---
 
 ## AI × 感知 (AI × Perception)
-
 * **AI介导感知 (AI-mediated Perception)**  
   关注 AI 如何重新塑造人与现实世界之间的感知关系，探索环境、生态与身体经验如何成为 AI 交互的一部分。
 
@@ -30,7 +29,6 @@ nav_order: 5
 ---
 
 ## AI × 社会结构 (AI × Social Systems)
-
 * **AI原生社会性 (AI-native Sociality)**  
   关注 AI 不仅作为工具协助人类，而是如何形成具有身份、关系与协作机制的“AI原生社会结构”。
 
@@ -43,7 +41,6 @@ nav_order: 5
 ---
 
 ## AI × 象征系统 (AI × Symbolic Systems)
-
 * **共同体叙事与家庭隐喻 (Community Narratives & Family Metaphors)**  
   结合计算传播与数字人文方法，研究“家国同构”等家庭隐喻如何参与现代政治共同体与国家形象建构。
 
@@ -56,7 +53,6 @@ nav_order: 5
 ---
 
 ## AI × 叙事与世界构建 (AI × Narrative & Worldbuilding)
-
 * **叙事驱动 AI 系统 (Narrative-driven AI Systems)**  
   关注 AI 产品不仅作为功能工具存在，而是成为具有规则、角色与叙事逻辑的“世界”。
 
@@ -69,7 +65,6 @@ nav_order: 5
 ---
 
 ## AI × 历史与文明尺度 (AI × Civilizational Scale)
-
 * **文明结构与长期演化 (Civilizational Structures & Long-term Evolution)**  
   关注 AI 如何在更长时间尺度上影响历史解释、社会组织与文明结构。
 
@@ -85,7 +80,6 @@ nav_order: 5
 ---
 
 ## 项目经历
-
 ### 「此刻志」—— AI现实感知系统
 #### 发起人 / 交互研究者
 
