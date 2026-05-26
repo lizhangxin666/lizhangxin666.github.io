@@ -65,17 +65,6 @@ nav_order: 1
 
 <br>
 
-## 🛠 专业技能 | Skills & Competencies
-
-| 领域 | 技能详情 |
-| :--- | :--- |
-| **AIGC 技术应用** | **Multi-Agent 协作**、**Prompt Engineering** (System Prompt/CoT)、**Workflow Design**、模型微调与数据标注 |
-| **数据与研发** | **SQL** (业务取数)、**Python** (Pandas/Requests)、**HTML/CSS** (布局与 Markdown 渲染)、**因果推断** (学术视野) |
-| **产品与设计** | **Figma** (UI/UX)、**Xmind/Visio**、**Jira/Feishu**、PRD/用户调研报告撰写 |
-| **传播与研究** | 用户洞察 (定性/定量)、内容冷启动运营、商业级素材生产 (Midjourney/Deepseek) |
-
-<br>
-
 ## 🎨 作品集精选 | Portfolio Highlights
 
 > 以下作品基于 [Pi 智能设计平台](https://pi.deepvinci.tech/) 及其他 AIGC 工具创作，欢迎点击跳转查看👏🏻。
